@@ -1,4 +1,5 @@
 import React from 'react'
+import { data } from 'react-router-dom'
 
 export default function MarketTable() {
     return (
@@ -14,7 +15,20 @@ export default function MarketTable() {
                         <th className="py-3 px-4 text-right">Cap</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='divide-y divide-gray-900'>
+                    {/*Extraccion de datos de la moneda actual*/}
+                    {Object.keys(data).map((symbol) => {
+                        const coin = data[symbol][0];
+                        const qoute = coin.qoute.USD;
+
+                        return (
+                            <tr key={symbol} className="hover:bg-gray-900/50 transition-colors">
+                                <td className="py-4 px-4 font-medium text-white">
+                                    {coin.name} <span className="text-gray-500 text-xs ml-1">{coin.symbol}</span>
+                                </td>
+                            </tr>
+                        )
+                    })}
                 </tbody>
             </table>
         </div>
