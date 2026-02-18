@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getPortfpolio } from "../Services/api"
+import { getPortfolio } from "../Services/api"
 import MarketTable from "../Components/MarketTable";
 
 export default function Market() {
@@ -13,7 +13,7 @@ export default function Market() {
 
   // llamado a la API para traer los datos del portafolio
   const fetchData = async () => {
-    const response = await getPortfpolio();
+    const response = await getPortfolio();
     setData(response.data);
   }
 
