@@ -2,27 +2,20 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <nav className="flex justify-between items-center p-5 bg-[#111] border-b border-[#222] text-white font-sans">
-      {/* Logo */}
-      <div className="text-xl font-bold">CryptoInvestMent</div>
+    <nav className="flex justify-between items-center px-10 py-5 bg-[#0f172a] border-b border-gray-800 text-white">
+      <div className="text-2xl font-bold tracking-wide">
+        🚀 CryptoInvestment
+      </div>
 
-      {/* Navegacion */}
-
-      <div className="flex gap-5">
-        <Link to="/" className="text-[#aaa] hover:text-white transition-colors">
+      <div className="flex gap-8 text-gray-400">
+        <Link to="/" className="hover:text-white transition">
           Mercado
         </Link>
-        <Link
-          to="/charts"
-          className="text-[#aaa] hover:text-white transition-colors"
-        >
+        <Link to="/charts" className="hover:text-white transition">
           Graficos
         </Link>
-        <Link
-          to="/portfolio"
-          className="text-[#aaa] hover:text-white transition-colors"
-        >
-          Mi Portafolio
+        <Link to="/portfolio" className="hover:text-white transition">
+          Portafolio
         </Link>
       </div>
     </nav>
