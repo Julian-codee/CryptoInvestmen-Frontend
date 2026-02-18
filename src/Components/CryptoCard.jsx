@@ -3,7 +3,7 @@ import React from 'react'
 export default function CryptoCard({ coin }) {
     const quote = coin.quote.USD;
     return (
-        <div className="bg-[#111] p-5 rounded-[10px] w-[300px] shadow-lg text-white">
+        <div className="bg-[#111] p-5 rounded-[10px] w-75 shadow-lg text-white">
             <h3 className="text-lg font-semibold opacity-80">
                 {coin.name} ({coin.symbol})
             </h3>
