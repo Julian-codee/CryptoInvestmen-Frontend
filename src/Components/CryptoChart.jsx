@@ -25,7 +25,7 @@ export default function CryptoChart({ symbol }) {
         setData(response.data);
     }
     return (
-        <div className="h-96 w-full bg-[#111] p-4 rounded-xl border border-gray-800">
+        <div className="h-[300px] w-full bg-[#111] p-4 rounded-xl border border-gray-800">
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data}>
                     {/* XAxis permanece oculto como en tu original */}
