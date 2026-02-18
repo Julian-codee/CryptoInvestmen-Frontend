@@ -20,7 +20,7 @@ export default function Market() {
   return (
     <div className='p-10'>
       <h2>Mercado</h2>
-      <MarketTable />
+      <MarketTable data={data} />
     </div>
   )
 }
