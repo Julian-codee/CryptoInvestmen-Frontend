@@ -11,9 +11,9 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={Market} />
-          <Route path="/charts" element={Charts} />
-          <Route path="/portfolio" element={Portfolio} />
+          <Route path="/" element={<Market />} />
+          <Route path="/charts" element={<Charts />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
       </Router>
     </>
