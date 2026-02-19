@@ -14,6 +14,11 @@ export const toggleCrypto = (coin) =>
         cmc_id: coin.id,
     });
 
+export const getCurrentPrice = async (symbol) => {
+    const res = await API.get('/market');
+    const coin = res.data.find(c => c.symbol === symbol);
+    return coin ? coin.quote.USD.price : null;
+};
 
 
 export const getHistorical = (symbol, start, end) =>
